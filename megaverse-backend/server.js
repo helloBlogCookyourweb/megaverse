@@ -185,7 +185,7 @@ app.put('/api/polyanets/', (req, res) => {
         res.status(404).json({ message: 'No Polyanets available' });
     }
 });
-
 app.listen(port, () => {
-   console.log(`Server is running on port ${port}`);
-});
+    console.log(`Server is running on port ${port}`);
+ });
+module.exports = app; // Export the app object
