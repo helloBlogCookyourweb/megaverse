@@ -20,9 +20,12 @@ const {
 } = require('./placeholders');
 
 const app = express();
+const cors = require('cors');
 const port = 3000;
 
 app.use(bodyParser.json());
+// Enable CORS for all routes
+app.use(cors());
 
 app.get('/', (req, res) => {
    res.send('Welcome to the Megaverse API. Mock server is running');
